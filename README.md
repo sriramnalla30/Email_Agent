@@ -4,21 +4,21 @@ An intelligent, prompt-driven email agent that categorizes emails, extracts acti
 
 ## 🚀 Features
 
-*   **Inbox Ingestion:** Load mock emails to simulate a real inbox environment.
-*   **Prompt-Driven Architecture:** The "Brain" of the agent. Configure prompts for categorization, action extraction, and drafting.
-*   **Automated Processing:**
-    *   **Categorization:** Automatically tags emails (Important, Newsletter, Spam, To-Do).
-    *   **Action Items:** Extracts tasks and deadlines into structured JSON.
-    *   **Auto-Drafting:** Generates draft replies for "Important" and "To-Do" emails.
-*   **Agent Chat:** Chat with your inbox! Ask questions like "Summarize my unread emails" or "What tasks are due today?".
-*   **Draft Management:** Review, edit, and "send" (simulate) generated drafts.
+- **Inbox Ingestion:** Load mock emails to simulate a real inbox environment.
+- **Prompt-Driven Architecture:** The "Brain" of the agent. Configure prompts for categorization, action extraction, and drafting.
+- **Automated Processing:**
+  - **Categorization:** Automatically tags emails (Important, Newsletter, Spam, To-Do).
+  - **Action Items:** Extracts tasks and deadlines into structured JSON.
+  - **Auto-Drafting:** Generates draft replies for "Important" and "To-Do" emails.
+- **Agent Chat:** Chat with your inbox! Ask questions like "Summarize my unread emails" or "What tasks are due today?".
+- **Draft Management:** Review, edit, and "send" (simulate) generated drafts.
 
 ## 🛠️ Tech Stack
 
-*   **Frontend:** React, TypeScript, Tailwind CSS, Vite, Axios.
-*   **Backend:** Python, FastAPI, SQLAlchemy, Pydantic.
-*   **Database:** SQLite (Local), easily swappable for PostgreSQL.
-*   **AI/LLM:** Modular service layer supporting Gemini, Groq, or OpenAI.
+- **Frontend:** React, TypeScript, Tailwind CSS, Vite, Axios.
+- **Backend:** Python, FastAPI, SQLAlchemy, Pydantic.
+- **Database:** SQLite (Local), easily swappable for PostgreSQL.
+- **AI/LLM:** Modular service layer supporting Gemini, Groq, or OpenAI.
 
 ## 📂 Project Structure
 
@@ -43,9 +43,10 @@ An intelligent, prompt-driven email agent that categorizes emails, extracts acti
 ## ⚡ Setup Instructions
 
 ### Prerequisites
-*   Python 3.9+
-*   Node.js 16+
-*   API Key for Gemini or Groq
+
+- Python 3.9+
+- Node.js 16+
+- API Key for Gemini or Groq
 
 ### 1. Backend Setup
 
@@ -99,42 +100,48 @@ An intelligent, prompt-driven email agent that categorizes emails, extracts acti
 ## 📖 Usage Guide
 
 ### 1. Loading the Mock Inbox
-*   Go to the **Inbox** tab.
-*   Click **"Load Mock Data"**. This injects 10-15 sample emails (Work, Newsletters, Spam) into the system.
+
+- Go to the **Inbox** tab.
+- Click **"Load Mock Data"**. This injects 10-15 sample emails (Work, Newsletters, Spam) into the system.
 
 ### 2. Running the Agent
-*   Click **"Run Agent"**.
-*   The system will:
-    1.  Fetch the "Categorization" prompt from the DB.
-    2.  Send each email to the LLM.
-    3.  Tag the email (e.g., "Important").
-    4.  Extract action items (e.g., "Submit report by Friday").
-    5.  Generate a draft reply if the email is Important.
+
+- Click **"Run Agent"**.
+- The system will:
+  1.  Fetch the "Categorization" prompt from the DB.
+  2.  Send each email to the LLM.
+  3.  Tag the email (e.g., "Important").
+  4.  Extract action items (e.g., "Submit report by Friday").
+  5.  Generate a draft reply if the email is Important.
 
 ### 3. Configuring Prompts ("The Brain")
-*   Go to the **Prompt Brain** tab.
-*   Here you can edit the instructions the agent uses.
-*   *Example:* Change the "Auto-Reply" prompt to "Be very casual and use emojis".
-*   Save the prompt and re-run the agent to see the behavior change!
+
+- Go to the **Prompt Brain** tab.
+- Here you can edit the instructions the agent uses.
+- _Example:_ Change the "Auto-Reply" prompt to "Be very casual and use emojis".
+- Save the prompt and re-run the agent to see the behavior change!
 
 ### 4. Chatting with your Inbox
-*   Go to **Email Agent**.
-*   Ask: "What is the most urgent task today?" or "Summarize the email from the Boss".
+
+- Go to **Email Agent**.
+- Ask: "What is the most urgent task today?" or "Summarize the email from the Boss".
 
 ### 5. Managing Drafts
-*   Go to **Drafts**.
-*   Select a generated draft.
-*   Edit the content and click "Send" (simulates sending).
+
+- Go to **Drafts**.
+- Select a generated draft.
+- Edit the content and click "Send" (simulates sending).
 
 ## 🧪 Evaluation Criteria Checklist
 
-*   ✅ **Functionality:** Ingestion, Categorization, Action Extraction, Drafting all working.
-*   ✅ **Prompt-Driven:** All logic uses stored prompts editable via UI.
-*   ✅ **Code Quality:** Modular Service/Controller pattern.
-*   ✅ **UX:** Clean Tailwind UI with distinct sections.
-*   ✅ **Safety:** Emails are drafted, never auto-sent.
+- ✅ **Functionality:** Ingestion, Categorization, Action Extraction, Drafting all working.
+- ✅ **Prompt-Driven:** All logic uses stored prompts editable via UI.
+- ✅ **Code Quality:** Modular Service/Controller pattern.
+- ✅ **UX:** Clean Tailwind UI with distinct sections.
+- ✅ **Safety:** Emails are drafted, never auto-sent.
 
 ## 📜 License
+
 MIT
 
 A prompt-driven, intelligent email agent built for Ocean AI. This application allows users to manage their inbox, categorize emails using LLMs, extract action items, and generate draft replies via a chat interface.
@@ -156,11 +163,13 @@ A prompt-driven, intelligent email agent built for Ocean AI. This application al
 ## Setup Instructions
 
 ### Prerequisites
+
 - Node.js (v16+)
 - Python (v3.10+)
 - API Keys for Gemini and Groq (configured in `.env`)
 
 ### Backend Setup
+
 1. Navigate to the root directory.
 2. Install dependencies:
    ```bash
@@ -172,6 +181,7 @@ A prompt-driven, intelligent email agent built for Ocean AI. This application al
    ```
 
 ### Frontend Setup
+
 1. Navigate to the `frontend` directory:
    ```bash
    cd frontend
