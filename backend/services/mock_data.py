@@ -42,6 +42,55 @@ def create_mock_emails(db):
             "body": "Click here to claim your free ticket to the Bahamas.",
             "timestamp": datetime.utcnow() - timedelta(hours=1),
             "category": "Uncategorized"
+        },
+        {
+            "sender": "team@project.com",
+            "subject": "Daily Standup Notes",
+            "body": "Here are the notes from today's standup. Action items: @John to fix bug #123, @Sarah to update docs.",
+            "timestamp": datetime.utcnow() - timedelta(hours=4),
+            "category": "Uncategorized"
+        },
+        {
+            "sender": "security@oceanai.com",
+            "subject": "Password Expiry Warning",
+            "body": "Your password will expire in 3 days. Please update it immediately.",
+            "timestamp": datetime.utcnow() - timedelta(days=3),
+            "category": "Uncategorized"
+        },
+        {
+            "sender": "recruiter@linkedin.com",
+            "subject": "New Job Opportunity",
+            "body": "I saw your profile and thought you'd be a great fit for this Senior AI Engineer role.",
+            "timestamp": datetime.utcnow() - timedelta(days=4),
+            "category": "Uncategorized"
+        },
+        {
+            "sender": "aws-billing@amazon.com",
+            "subject": "Invoice Available",
+            "body": "Your invoice for October 2025 is now available. Total: $45.20",
+            "timestamp": datetime.utcnow() - timedelta(days=5),
+            "category": "Uncategorized"
+        },
+        {
+            "sender": "mom@gmail.com",
+            "subject": "Dinner on Sunday?",
+            "body": "Are you free for dinner this Sunday? Let me know.",
+            "timestamp": datetime.utcnow() - timedelta(hours=6),
+            "category": "Uncategorized"
+        },
+        {
+            "sender": "jira@oceanai.com",
+            "subject": "[JIRA] Issue Assigned: BE-404",
+            "body": "You have been assigned to issue BE-404: API Latency Spike.",
+            "timestamp": datetime.utcnow() - timedelta(minutes=30),
+            "category": "Uncategorized"
+        },
+        {
+            "sender": "marketing@tools.com",
+            "subject": "Last Chance: 50% Off",
+            "body": "Our sale ends tonight. Don't miss out on these software deals.",
+            "timestamp": datetime.utcnow() - timedelta(hours=8),
+            "category": "Uncategorized"
         }
     ]
 
