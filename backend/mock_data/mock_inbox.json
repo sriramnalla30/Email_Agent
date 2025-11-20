@@ -1,0 +1,62 @@
+[
+    {
+        "sender": "boss@oceanai.com",
+        "subject": "Urgent: Project Update Meeting",
+        "body": "Hi Team, we need to meet tomorrow at 10 AM to discuss the Q4 roadmap. Please prepare your status reports.",
+        "received_at": "2025-11-19T09:00:00"
+    },
+    {
+        "sender": "newsletter@techweekly.com",
+        "subject": "This Week in AI: Agents are taking over",
+        "body": "Top stories: 1. New Gemini model released. 2. Python 4.0 rumors. 3. How to build an agent in 5 minutes.",
+        "received_at": "2025-11-19T08:30:00"
+    },
+    {
+        "sender": "hr@oceanai.com",
+        "subject": "Open Enrollment for Benefits",
+        "body": "It's that time of year again. Please log in to the portal and select your health plans by Friday.",
+        "received_at": "2025-11-18T14:00:00"
+    },
+    {
+        "sender": "spam@offer.com",
+        "subject": "You won a cruise!",
+        "body": "Click here to claim your free cruise to the Bahamas. Limited time offer!",
+        "received_at": "2025-11-18T12:00:00"
+    },
+    {
+        "sender": "client@shippingco.com",
+        "subject": "Feedback on the new dashboard",
+        "body": "The new vessel tracking dashboard looks great, but we found a bug in the map view. Can you fix it by EOD?",
+        "received_at": "2025-11-19T10:15:00"
+    },
+    {
+        "sender": "recruiter@linkedin.com",
+        "subject": "New job opportunity",
+        "body": "I saw your profile and thought you'd be a great fit for this Senior AI Engineer role.",
+        "received_at": "2025-11-17T16:45:00"
+    },
+    {
+        "sender": "team@project.com",
+        "subject": "Code Review Request",
+        "body": "Can someone review my PR #123? It blocks the release.",
+        "received_at": "2025-11-19T11:00:00"
+    },
+    {
+        "sender": "billing@cloudprovider.com",
+        "subject": "Invoice for October",
+        "body": "Your invoice for October is ready. Amount: $150.00. Due date: Nov 30.",
+        "received_at": "2025-11-01T00:00:00"
+    },
+    {
+        "sender": "event@meetup.com",
+        "subject": "Python User Group Meetup",
+        "body": "Join us this Thursday for a talk on FastAPI and AsyncIO.",
+        "received_at": "2025-11-15T18:00:00"
+    },
+    {
+        "sender": "security@oceanai.com",
+        "subject": "Security Alert: Suspicious Login",
+        "body": "We detected a login from a new device. If this wasn't you, please change your password immediately.",
+        "received_at": "2025-11-19T12:00:00"
+    }
+]
