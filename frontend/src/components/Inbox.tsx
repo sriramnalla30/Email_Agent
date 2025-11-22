@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getEmails, loadMockData, processInbox } from '../api/client';
-import { RefreshCw, Download, Play, AlertCircle, CheckCircle, Clock } from 'lucide-react';
+import { RefreshCw, Download, Play, AlertCircle, CheckCircle, Clock, Loader2 } from 'lucide-react';
 import clsx from 'clsx';
 
 interface Email {
@@ -17,6 +17,7 @@ const Inbox = () => {
     const [emails, setEmails] = useState<Email[]>([]);
     const [loading, setLoading] = useState(false);
     const [processing, setProcessing] = useState(false);
+    const [mockLoading, setMockLoading] = useState(false);
 
     const fetchEmails = async () => {
         setLoading(true);
@@ -35,10 +36,15 @@ const Inbox = () => {
     }, []);
 
     const handleLoadMock = async () => {
+        setMockLoading(true);
         setLoading(true);
-        await loadMockData();
-        await fetchEmails();
-        setLoading(false);
+        try {
+            await loadMockData();
+            await fetchEmails();
+        } finally {
+            setLoading(false);
+            setMockLoading(false);
+        }
     };
 
     const handleProcess = async () => {
@@ -68,23 +74,32 @@ const Inbox = () => {
                 <div className="flex gap-3">
                     <button
                         onClick={handleLoadMock}
-                        className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 rounded-lg text-slate-700 hover:bg-slate-50 transition-colors"
+                        disabled={mockLoading || loading}
+                        className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 rounded-lg text-slate-700 hover:bg-slate-50 transition-colors disabled:opacity-50"
                     >
-                        <Download size={18} />
-                        Load Mock Data
+                        {mockLoading ? <Loader2 size={18} className="animate-spin text-blue-600" /> : <Download size={18} />}
+                        {mockLoading ? 'Loading Data...' : 'Load Mock Data'}
                     </button>
                     <button
                         onClick={handleProcess}
-                        disabled={processing}
+                        disabled={processing || loading}
                         className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
                     >
-                        <Play size={18} />
+                        {processing ? <Loader2 size={18} className="animate-spin" /> : <Play size={18} />}
                         {processing ? 'Processing...' : 'Run Agent'}
                     </button>
                 </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden min-h-[400px] relative">
+                {loading && (
+                    <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center z-10">
+                        <Loader2 size={40} className="animate-spin text-blue-600 mb-4" />
+                        <p className="text-slate-600 font-medium animate-pulse">
+                            {mockLoading ? 'Generating Mock Emails...' : 'Fetching Inbox...'}
+                        </p>
+                    </div>
+                )}
                 <div className="overflow-x-auto">
                     <table className="w-full text-left">
                         <thead className="bg-slate-50 border-b border-slate-200">
