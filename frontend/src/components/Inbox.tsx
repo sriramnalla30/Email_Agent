@@ -31,9 +31,10 @@ const Inbox = () => {
         }
     };
 
-    useEffect(() => {
-        fetchEmails();
-    }, []);
+    // Don't auto-fetch on mount - wait for user to click "Load Mock Data"
+    // useEffect(() => {
+    //     fetchEmails();
+    // }, []);
 
     const handleLoadMock = async () => {
         setMockLoading(true);
