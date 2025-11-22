@@ -140,11 +140,6 @@ An intelligent, prompt-driven email agent that categorizes emails, extracts acti
 - ✅ **UX:** Clean Tailwind UI with distinct sections.
 - ✅ **Safety:** Emails are drafted, never auto-sent.
 
-## 📜 License
-
-MIT
-
-A prompt-driven, intelligent email agent built for Ocean AI. This application allows users to manage their inbox, categorize emails using LLMs, extract action items, and generate draft replies via a chat interface.
 
 ## Features
 
